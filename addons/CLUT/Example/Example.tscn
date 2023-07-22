@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://6dyr2km4g1s8"]
+
+[ext_resource type="Shader" path="res://addons/CLUT/Shader/CLUT.gdshader" id="1_vovjw"]
+[ext_resource type="Texture2D" uid="uid://bdy4fkurfrbjd" path="res://addons/CLUT/Example/PlayerRun/PlayerRun.skin.png" id="2_fg2y8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m6fp1"]
+shader = ExtResource("1_vovjw")
+shader_parameter/clut_texture = ExtResource("2_fg2y8")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uvufr"]
+load_path = "res://.godot/imported/PlayerRun.base.png-ceec60b5bd88fafaf3628183f252c1d7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xogmn"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nislk"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcdru"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0xrf"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiwqf"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pq1a"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gibpe"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tpnf"]
+atlas = SubResource("CompressedTexture2D_uvufr")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h7q5k"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_xogmn")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_nislk")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_jcdru")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_j0xrf")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_jiwqf")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_1pq1a")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_gibpe")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_2tpnf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Example" type="Node"]
+
+[node name="PlayerRun" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_m6fp1")
+position = Vector2(8, 8)
+scale = Vector2(0.333333, 0.333333)
+sprite_frames = SubResource("SpriteFrames_h7q5k")
+autoplay = "default"
+frame_progress = 0.581979
