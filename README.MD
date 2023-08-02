@@ -3,6 +3,7 @@
 
 Dynamic pixel art skin texture shader.
 > Only compatible with **Godot 4.x**.
+ 
 > Heavily inspired by [aarthificial](https://github.com/aarthificial)'s "[Pixel Art Animation. Reinvented](https://youtu.be/HsOKwUwL1bE)" video.
 
 ## Features
